@@ -21,7 +21,7 @@ public class DisplayOutput {
 
             num3 = num1 + num2;
             System.out.println(num3);
-            num4 = num1 * num2;
+            num4 = num1 / num2;
             System.out.println(num4);
         }
         catch (InputMismatchException e) {
