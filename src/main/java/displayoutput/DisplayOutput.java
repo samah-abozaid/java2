@@ -7,38 +7,36 @@ public class DisplayOutput {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int num1;
-        int num2;
-        int num3;
-        int num4;
+        int nbOne;
+        int nbTwo;
+        int nbThree;
+
         try {
+            System.out.print("Entrez le premier nombre : ");
+            nbOne = Scanner.nextInt();
 
+            System.out.print("Entrez le deuxieme nombre : ");
+            nbTwo = Scanner.nextInt();
+            Scanner.close();
 
-            System.out.println("enter num1");
-            num1 = input.nextInt();
-            System.out.println("enter num2");
-            num2 = input.nextInt();
+            nbThree = nbOne * nbTwo;
+            String resultToFormat = "Résultat : %d * %d = %d";
+            String result = String.format(resultToFormat, nbOne, nbTwo, nbThree);
 
-            num3 = num1 + num2;
-            System.out.println(num3);
-            num4 = num1 / num2;
-            System.out.println(num4);
-        }
-        catch (InputMismatchException e) {
+            System.out.println(result);
+        } catch (InputMismatchException e) {
             System.out.println("Attention ! Tu es sencé mettre un nombre entier");
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
-
-
-
-
-
-
-
-
-
     }
-}
+
+
+
+
+
+
+
+
+
+
